@@ -1,0 +1,23 @@
+<div *ngIf='fascicoloCorrente'>
+<h2>{{fascicoloCorrente.name}}</h2>
+<div>{{this.route.snapshot.paramMap.get('id')}}
+  {{this.route.snapshot.paramMap.get('name')}}</div>
+<ul class='fascicoli'>
+  <li *ngFor="let fascicolo of fascicoli">
+    <button (click)="changeFascicolo(fascicolo.id)">
+    <!--<a routerLink='{{fascicolo.id}}'>-->
+      <!-- <img src="..\assets\images\Folder"> -->
+      <span class="dir">{{fascicolo.id}}</span> {{fascicolo.name}}
+    </button>
+  </li>
+</ul>
+<ul class="documenti">
+  <li *ngFor="let documento of documenti">
+    <button (click)="openDocumento(documento.id)">
+    <!--<a routerLink='/detail/{{documento.id}}'> -->
+    <!-- <img src="..\assets\images\Document"> -->
+      <span class="doc">{{documento.id}}</span> {{documento.name}}
+    </button>
+  </li>
+</ul>
+</div>

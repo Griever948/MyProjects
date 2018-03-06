@@ -1,0 +1,6 @@
+<div *ngIf="documento">
+  <h2>{{ documento.name | uppercase }} Details</h2>
+  <div>
+    <span>id: </span>{{documento.id}}</div>
+    <button (click)="goBack()">go back</button>
+</div>
